@@ -1,0 +1,108 @@
+
+.cq-Dialog {
+
+    .bootstrap-layout-dialog {
+        background-color: rgba(242, 242, 242, 1);
+    
+        .coral-bootstrap-group {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            border-bottom: 0;
+
+            &__left, &__right {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                width: 40%;
+                label {
+                    white-space: nowrap;
+                }
+            }
+
+            &__left {
+                background-color: white;
+                justify-content: center;
+            }
+
+            &__right {
+                border-left: 1px solid black;
+                width: 60%;
+                flex-direction: column;
+
+                &--first {
+                    display: flex;
+                    flex-direction: row;
+                    align-self: flex-start;
+                    
+                    & > div:nth-of-type(1) {
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+
+        // Generic
+
+        .coral-label__advanced-padding-margin {
+            display: block;
+            padding-top: 15px;
+            border-top: 1px solid black;
+        }
+
+        .coral-label__advanced-col-options {
+            align-self: flex-start;
+            padding-bottom: 20px;
+            font-size: .72rem;
+        }
+
+        .coral-radio--slim > coral-radio {
+            margin: 0;
+            padding-top: .3125rem;
+            padding-bottom: .3125rem;
+        }
+
+        .coral-margin-options {
+            & div {
+                display: inline-block;
+            }
+            
+            & > div:nth-of-type(1) {
+                padding-right: 40px;
+            }
+        }
+
+        .coral-label--large {
+            font-size: 48px;
+            font-family: 'Arial';
+            font-weight: 400;
+            font-style: normal;
+            color: #33333359;
+            text-align: center;
+            line-height: normal;
+            white-space: nowrap;
+            align-self: center;
+            padding-right: 20px;
+        }
+    }
+
+    // Applying coral-radio--inline to radio will make values inline-block
+    .coral-radio--inline > .coral3-Radio {
+        display: inline-block;
+    }
+
+    // Show granite/ui/components/coral/foundation/form/checkbox as inline-block
+    .coral-element--inline-block {
+        display: inline-block !important;
+    }
+
+    // Show granite/ui/components/coral/foundation/text as block
+    .coral-element--block {
+        display: block !important;
+    }
+
+    // Add to top level granite/ui/components/coral/foundation/container to make contents expand with dialog
+    .coral-width--full {
+        width: 100%;
+    }
+}

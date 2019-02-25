@@ -1,0 +1,3 @@
+#base=js
+bootstrap-layout-author-selection.js
+show-hide-elements.js

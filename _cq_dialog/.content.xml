@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Bootstrap Layout"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        granite:class="bootstrap-layout-dialog"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <general
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                granite:class="coral-width--full"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <modeSelection
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                        granite:class="coral-radio--inline js-show-hide-element"
+                        name="./modeSelection">
+                        <granite:data show-hide-target=".js-show-hide-column-row" jcr:primaryType="nt:unstructured" />
+                        <items jcr:primaryType="nt:unstructured">
+                            <op1
+                                jcr:primaryType="nt:unstructured"
+                                text="Column"
+                                value="column"
+                                checked="{Boolean}true"/>
+                            <op2
+                                jcr:primaryType="nt:unstructured"
+                                text="Row"
+                                value="row"/>
+                        </items>
+                    </modeSelection>
+
+                    <columnMode
+                        jcr:primaryType="nt:unstructured"
+                        granite:class="js-show-hide-column-row"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data show-hide-value="column" jcr:primaryType="nt:unstructured" />
+                        <items jcr:primaryType="nt:unstructured">
+                            <breakpointCheckboxLabel
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-element--block"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="Select grid system breakpoint size"/>
+                            <XS
+                                granite:class="cmp-form-option-item-active coral-element--inline-block js-show-hide-element"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./xs"
+                                text="XS"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false" >
+                                <granite:data show-hide-target=".js-show-hide-panel-xs" jcr:primaryType="nt:unstructured" />
+                            </XS>
+
+                            <SM
+                                granite:class="cmp-form-option-item-active coral-element--inline-block js-show-hide-element"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./sm"
+                                text="SM"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false">
+                                <granite:data show-hide-target=".js-show-hide-panel-sm" jcr:primaryType="nt:unstructured" />
+                            </SM>
+
+                            <MD
+                                granite:class="cmp-form-option-item-active coral-element--inline-block js-show-hide-element"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./md"
+                                text="MD"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false">
+                                <granite:data show-hide-target=".js-show-hide-panel-md" jcr:primaryType="nt:unstructured" />
+                            </MD>
+
+                            <LG
+                                granite:class="cmp-form-option-item-active coral-element--inline-block js-show-hide-element"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./lg"
+                                text="LG"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false" >
+                                <granite:data show-hide-target=".js-show-hide-panel-lg" jcr:primaryType="nt:unstructured" />
+                            </LG>
+
+                            <gridXs
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-bootstrap-group js-show-hide-panel-xs"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <gridXsLeft
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__left"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <breakpointCheckboxLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-label--large"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            text="XS"/>
+                                        <columnSize
+                                            granite:class="cmp-options--editor-type-v1"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Column Size"
+                                            name="./columnSizeXS">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <op1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="1"
+                                                    value="1"/>
+                                                <op2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="2"
+                                                    value="2"/>
+                                                <op3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="3"
+                                                    value="3"/>
+                                                <op4
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="4"
+                                                    value="4"/>
+                                                <op5
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="5"
+                                                    value="5"/>
+                                                <op6
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="6"
+                                                    value="6"/>
+                                                <op7
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="7"
+                                                    value="7"/>
+                                                <op8
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="8"
+                                                    value="8"/>
+                                                <op9
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="9"
+                                                    value="9"/>
+                                                <op10
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="10"
+                                                    value="10"/>
+                                                <op11
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="11"
+                                                    value="11"/>
+                                                <op12
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="12"
+                                                    value="12"/>
+                                            </items>
+                                        </columnSize>
+                                    </items>
+                                </gridXsLeft>
+                                <gridXsRight
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__right"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <advancedColOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            granite:class="coral-label__advanced-col-options"
+                                            text="Advanced Col Options"/>
+                                        <gridXsRightBottom
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-bootstrap-group__right--first"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                
+                                                <offsetsColOrdering
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                    fieldLabel="Offsets and Col Ordering"
+                                                    granite:class="coral-radio--slim"
+                                                    name="./offsetsColOrderingXS">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Offset"
+                                                            value="offset"
+                                                            checked="{Boolean}true"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Push"
+                                                            value="push"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Pull"
+                                                            value="pull"/>
+                                                    </items>
+                                                </offsetsColOrdering>
+                                                <offsetOrderingSize
+                                                    granite:class="cmp-options--editor-type-v1"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Offset or Ordering Size"
+                                                    name="./offsetOrderingSizeXS">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op0
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="None"
+                                                            value="None"/>
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="1"
+                                                            value="1"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="2"
+                                                            value="2"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="3"
+                                                            value="3"/>
+                                                        <op4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="4"
+                                                            value="4"/>
+                                                        <op5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="5"
+                                                            value="5"/>
+                                                        <op6
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="6"
+                                                            value="6"/>
+                                                        <op7
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="7"
+                                                            value="7"/>
+                                                        <op8
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="8"
+                                                            value="8"/>
+                                                        <op9
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="9"
+                                                            value="9"/>
+                                                        <op10
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="10"
+                                                            value="10"/>
+                                                        <op11
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="11"
+                                                            value="11"/>
+                                                        <op12
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="12"
+                                                            value="12"/>
+                                                    </items>
+                                                </offsetOrderingSize>
+                                            </items>
+                                        </gridXsRightBottom>
+                                        
+                                    </items>
+                                </gridXsRight>
+                                </items>
+                            </gridXs>
+                            
+                            <gridSm
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-bootstrap-group js-show-hide-panel-sm"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <gridSmLeft
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__left"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <breakpointCheckboxLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-label--large"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            text="SM"/>
+                                        <columnSize
+                                            granite:class="cmp-options--editor-type-v1"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Column Size"
+                                            name="./columnSizeSM">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <op1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="1"
+                                                    value="1"/>
+                                                <op2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="2"
+                                                    value="2"/>
+                                                <op3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="3"
+                                                    value="3"/>
+                                                <op4
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="4"
+                                                    value="4"/>
+                                                <op5
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="5"
+                                                    value="5"/>
+                                                <op6
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="6"
+                                                    value="6"/>
+                                                <op7
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="7"
+                                                    value="7"/>
+                                                <op8
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="8"
+                                                    value="8"/>
+                                                <op9
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="9"
+                                                    value="9"/>
+                                                <op10
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="10"
+                                                    value="10"/>
+                                                <op11
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="11"
+                                                    value="11"/>
+                                                <op12
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="12"
+                                                    value="12"/>
+                                            </items>
+                                        </columnSize>
+                                    </items>
+                                </gridSmLeft>
+                                <gridSmRight
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__right"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <advancedColOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            granite:class="coral-label__advanced-col-options"
+                                            text="Advanced Col Options"/>
+                                        <gridSmRightBottom
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-bootstrap-group__right--first"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                
+                                                <offsetsColOrdering
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                    fieldLabel="Offsets and Col Ordering"
+                                                    granite:class="coral-radio--slim"
+                                                    name="./offsetsColOrderingSM">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Offset"
+                                                            value="offset"
+                                                            checked="{Boolean}true"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Push"
+                                                            value="push"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Pull"
+                                                            value="pull"/>
+                                                    </items>
+                                                </offsetsColOrdering>
+                                                <offsetOrderingSize
+                                                    granite:class="cmp-options--editor-type-v1"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Offset or Ordering Size"
+                                                    name="./offsetOrderingSizeSM">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op0
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="None"
+                                                            value="None"/>
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="1"
+                                                            value="1"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="2"
+                                                            value="2"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="3"
+                                                            value="3"/>
+                                                        <op4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="4"
+                                                            value="4"/>
+                                                        <op5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="5"
+                                                            value="5"/>
+                                                        <op6
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="6"
+                                                            value="6"/>
+                                                        <op7
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="7"
+                                                            value="7"/>
+                                                        <op8
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="8"
+                                                            value="8"/>
+                                                        <op9
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="9"
+                                                            value="9"/>
+                                                        <op10
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="10"
+                                                            value="10"/>
+                                                        <op11
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="11"
+                                                            value="11"/>
+                                                        <op12
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="12"
+                                                            value="12"/>
+                                                    </items>
+                                                </offsetOrderingSize>
+                                            </items>
+                                        </gridSmRightBottom>
+                                        
+                                    </items>
+                                </gridSmRight>
+                                </items>
+                            </gridSm>
+
+                            <gridMd
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-bootstrap-group js-show-hide-panel-md"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <gridMdLeft
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__left"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <breakpointCheckboxLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-label--large"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            text="MD"/>
+                                        <columnSize
+                                            granite:class="cmp-options--editor-type-v1"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Column Size"
+                                            name="./columnSizeMD">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <op1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="1"
+                                                    value="1"/>
+                                                <op2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="2"
+                                                    value="2"/>
+                                                <op3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="3"
+                                                    value="3"/>
+                                                <op4
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="4"
+                                                    value="4"/>
+                                                <op5
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="5"
+                                                    value="5"/>
+                                                <op6
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="6"
+                                                    value="6"/>
+                                                <op7
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="7"
+                                                    value="7"/>
+                                                <op8
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="8"
+                                                    value="8"/>
+                                                <op9
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="9"
+                                                    value="9"/>
+                                                <op10
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="10"
+                                                    value="10"/>
+                                                <op11
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="11"
+                                                    value="11"/>
+                                                <op12
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="12"
+                                                    value="12"/>
+                                            </items>
+                                        </columnSize>
+                                    </items>
+                                </gridMdLeft>
+                                <gridMdRight
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__right"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <advancedColOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            granite:class="coral-label__advanced-col-options"
+                                            text="Advanced Col Options"/>
+                                        <gridMdRightBottom
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-bootstrap-group__right--first"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                
+                                                <offsetsColOrdering
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                    fieldLabel="Offsets and Col Ordering"
+                                                    granite:class="coral-radio--slim"
+                                                    name="./offsetsColOrderingMD">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Offset"
+                                                            value="offset"
+                                                            checked="{Boolean}true"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Push"
+                                                            value="push"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Pull"
+                                                            value="pull"/>
+                                                    </items>
+                                                </offsetsColOrdering>
+                                                <offsetOrderingSize
+                                                    granite:class="cmp-options--editor-type-v1"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Offset or Ordering Size"
+                                                    name="./offsetOrderingSizeMD">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op0
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="None"
+                                                            value="None"/>
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="1"
+                                                            value="1"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="2"
+                                                            value="2"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="3"
+                                                            value="3"/>
+                                                        <op4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="4"
+                                                            value="4"/>
+                                                        <op5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="5"
+                                                            value="5"/>
+                                                        <op6
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="6"
+                                                            value="6"/>
+                                                        <op7
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="7"
+                                                            value="7"/>
+                                                        <op8
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="8"
+                                                            value="8"/>
+                                                        <op9
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="9"
+                                                            value="9"/>
+                                                        <op10
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="10"
+                                                            value="10"/>
+                                                        <op11
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="11"
+                                                            value="11"/>
+                                                        <op12
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="12"
+                                                            value="12"/>
+                                                    </items>
+                                                </offsetOrderingSize>
+                                            </items>
+                                        </gridMdRightBottom>
+                                        
+                                    </items>
+                                </gridMdRight>
+                                </items>
+                            </gridMd>
+
+                            <gridLg
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-bootstrap-group js-show-hide-panel-lg"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <gridLgLeft
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__left"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <breakpointCheckboxLabel
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-label--large"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            text="LG"/>
+                                        <columnSize
+                                            granite:class="cmp-options--editor-type-v1"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Column Size"
+                                            name="./columnSizeLG">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <op1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="1"
+                                                    value="1"/>
+                                                <op2
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="2"
+                                                    value="2"/>
+                                                <op3
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="3"
+                                                    value="3"/>
+                                                <op4
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="4"
+                                                    value="4"/>
+                                                <op5
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="5"
+                                                    value="5"/>
+                                                <op6
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="6"
+                                                    value="6"/>
+                                                <op7
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="7"
+                                                    value="7"/>
+                                                <op8
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="8"
+                                                    value="8"/>
+                                                <op9
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="9"
+                                                    value="9"/>
+                                                <op10
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="10"
+                                                    value="10"/>
+                                                <op11
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="11"
+                                                    value="11"/>
+                                                <op12
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="12"
+                                                    value="12"/>
+                                            </items>
+                                        </columnSize>
+                                    </items>
+                                </gridLgLeft>
+                                <gridLgRight
+                                    jcr:primaryType="nt:unstructured"
+                                    granite:class="coral-bootstrap-group__right"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <advancedColOptions
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/text"
+                                            granite:class="coral-label__advanced-col-options"
+                                            text="Advanced Col Options"/>
+                                        <gridLgRightBottom
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="coral-bootstrap-group__right--first"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                
+                                                <offsetsColOrdering
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+                                                    fieldLabel="Offsets and Col Ordering"
+                                                    granite:class="coral-radio--slim"
+                                                    name="./offsetsColOrderingLG">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Offset"
+                                                            value="offset"
+                                                            checked="{Boolean}true"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Push"
+                                                            value="push"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Column Pull"
+                                                            value="pull"/>
+                                                    </items>
+                                                </offsetsColOrdering>
+                                                <offsetOrderingSize
+                                                    granite:class="cmp-options--editor-type-v1"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Offset or Ordering Size"
+                                                    name="./offsetOrderingSizeLG">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <op0
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="None"
+                                                            value="None"/>
+                                                        <op1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="1"
+                                                            value="1"/>
+                                                        <op2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="2"
+                                                            value="2"/>
+                                                        <op3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="3"
+                                                            value="3"/>
+                                                        <op4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="4"
+                                                            value="4"/>
+                                                        <op5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="5"
+                                                            value="5"/>
+                                                        <op6
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="6"
+                                                            value="6"/>
+                                                        <op7
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="7"
+                                                            value="7"/>
+                                                        <op8
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="8"
+                                                            value="8"/>
+                                                        <op9
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="9"
+                                                            value="9"/>
+                                                        <op10
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="10"
+                                                            value="10"/>
+                                                        <op11
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="11"
+                                                            value="11"/>
+                                                        <op12
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="12"
+                                                            value="12"/>
+                                                    </items>
+                                                </offsetOrderingSize>
+                                            </items>
+                                        </gridLgRightBottom>
+                                        
+                                    </items>
+                                </gridLgRight>
+                                </items>
+                            </gridLg>
+
+                            <advancedColPaddingMargin
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-label__advanced-padding-margin"
+                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                text="Advanced Col Padding and Margin"/>
+                            <paddingLeftRight
+                                granite:class="cmp-form-option-item-active"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./paddingLeftRightZero"
+                                text="Set padding left/right 0"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false" />
+                            <marginOptions
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="coral-margin-options"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <marginTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldLabel="Margin Top (px)"
+                                        unit="px"
+                                        step="5"
+                                        name="./marginTop"/>
+                                    <marginBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldLabel="Margin Bottom (px)"
+                                        unit="px"
+                                        step="5"
+                                        name="./marginBottom"/>
+                                </items>
+                            </marginOptions>
+                        </items>
+                    </columnMode>
+
+                    <rowMode
+                        jcr:primaryType="nt:unstructured"
+                        granite:class="js-show-hide-column-row"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data show-hide-value="row" jcr:primaryType="nt:unstructured" />
+                        <items jcr:primaryType="nt:unstructured">
+                            <rowMarginZero
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./rowMarginZero"
+                                text="Set margin 0"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false" />
+                        </items>
+                    </rowMode>
+                </items>
+            </general>
+        </items>
+    </content>
+</jcr:root>

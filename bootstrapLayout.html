@@ -1,0 +1,24 @@
+<sly data-sly-use.BootstrapLayout="${'bootstrap.components.BootstrapLayoutComp'}" />
+<sly 
+     data-sly-test.authorMode="${(wcmmode.edit || wcmmode.preview)}"     
+     data-sly-use.clientlibInclude="${'/libs/granite/sightly/templates/clientlib.html'}" 
+     data-sly-call="${clientlibInclude.all @ categories='bootstraplayout'}" />
+
+<!--/* Configure to show in author message section  */-->
+<div data-sly-test="${authorMode}" class="c-bootstrap-layout__placeholder" >
+    ${properties.modeSelection || 'Please configure this component'}
+    <sly data-sly-test="${properties.modeSelection == 'column'}"> - ${BootstrapLayout.columnClasses}</sly>
+</div>
+
+<!--/* Column Mode */-->
+<div data-sly-test="${properties.modeSelection == 'column'}" 
+        class="${BootstrapLayout.columnClasses}${properties.paddingLeftRightZero ? ' u-padding--0' : ''}${authorMode ? ' js-editor-fix-select-boxes' : ''}"
+        style="margin-top: ${properties.marginTop || 'auto' @ context='styleToken'}; margin-bottom: ${properties.marginBottom || 'auto' @ context='styleToken'};">
+    <sly data-sly-resource="${'bootstrapLayout' @ resourceType='wcm/foundation/components/parsys'}" />
+</div>
+
+<!--/* Row Mode */-->
+<div data-sly-test="${properties.modeSelection == 'row'}" class="row${properties.rowMarginZero ? ' u-margin--0' : ''}${authorMode ? ' js-editor-add-clearfix' : ''}">
+    <sly data-sly-resource="${'bootstrapLayout' @ resourceType='wcm/foundation/components/parsys'}" />
+</div>
+ 
